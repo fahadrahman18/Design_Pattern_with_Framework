@@ -1,13 +1,14 @@
 package ui.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import base.ProjectSpecificMethods;
 
 public class createLeadPage extends ProjectSpecificMethods{
 	
-	public createLeadPage() {
-		
+	public createLeadPage(WebDriver driver) {
+		this.driver = driver;
 	}
 	
 	public createLeadPage enterFirstName() {
@@ -27,7 +28,7 @@ public class createLeadPage extends ProjectSpecificMethods{
 	
 	public viewLeadPage clickCreateLeadButton() {
 		driver.findElement(By.xpath("//input[@class='smallSubmit']")).click();
-		return new viewLeadPage();
+		return new viewLeadPage(driver);
 	}
 
 }

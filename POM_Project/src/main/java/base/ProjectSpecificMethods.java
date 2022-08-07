@@ -13,7 +13,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 // GH Token - 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
 public class ProjectSpecificMethods {
-	public static WebDriver driver;
+	public WebDriver driver;
 	
 	@BeforeMethod
 	public void preCondition() {

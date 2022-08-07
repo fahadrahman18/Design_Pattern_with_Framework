@@ -5,12 +5,12 @@ import org.testng.annotations.Test;
 import base.ProjectSpecificMethods;
 import ui.pages.loginPage;
 
-public class TC001_createLead extends ProjectSpecificMethods{
+public class TC001_createLead extends ProjectSpecificMethods {
 	
 	@Test
 	public void runTC001() {
 		
-		loginPage page = new loginPage();
+		loginPage page = new loginPage(driver);
 		page
 		.enterUsername()
 		.enterPassword()

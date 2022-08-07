@@ -1,13 +1,14 @@
 package ui.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import base.ProjectSpecificMethods;
 
 public class loginPage extends ProjectSpecificMethods{
 	
-	public loginPage() {
-		
+	public loginPage(WebDriver driver) {
+		this.driver = driver;
 	}
 
 	public loginPage enterUsername() {
@@ -23,7 +24,7 @@ public class loginPage extends ProjectSpecificMethods{
 	
 	public welcomePage clickLoginPositive() {
 		driver.findElement(By.className("decorativeSubmit")).click();
-		return new welcomePage();
+		return new welcomePage(driver);
 	}
 	
 	public loginPage clickLoginNegative() {
